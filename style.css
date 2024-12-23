@@ -1,0 +1,150 @@
+body {
+    font-family: Arial, Helvetica, sans-serif;
+    background-image: url(images/img.png);
+    background-size: contain;
+    background-position: bottom;
+    background-attachment: fixed;
+    background-repeat: no-repeat;
+}
+
+.container {
+    width: 500px;
+    margin: 20px auto;
+}
+
+.form {
+    background-color: #00a3ff1f;
+    border-radius: 6px;
+    padding: 20px;
+    display: flex;
+    align-items: center;
+}
+
+.input {
+    padding: 10px;
+    border: 1px solid #ddd;
+    border-radius: 6px;
+    flex: 1;
+}
+
+input:focus {
+    outline: none;
+}
+input{
+    border: none;
+    background-color: transparent;
+}
+p{
+    text-align: center;
+    background-color: #00a3ff1f;
+    margin: 0;
+    padding: 10px;
+    border-radius: 6px;
+}
+.add {
+    border: none;
+    background-color:#119ff1;
+    color: white;
+    padding: 10px;
+    border-radius: 6px;
+    margin-left: 10px;
+    cursor: pointer;
+}
+
+.tasks {
+    background-color: #00a3ff1f;
+    margin-top: 20px;
+    border-radius: 6px;
+    padding: 20px;
+}
+
+.tasks .task {
+    background-color: white;
+    padding: 10px;
+    border-radius: 6px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    transition: 0.3s;
+    cursor: pointer;
+    border: 1px solid #ccc;
+}
+
+.tasks .task:not(:last-child) {
+    margin-bottom: 15px;
+}
+
+.tasks .task:hover {
+    background-color: #f7f7f7;
+}
+
+.tasks .task.done {
+    opacity: 0.5;
+    text-decoration: line-through;
+}
+
+.tasks .task span {
+    font-size: 16px;
+    padding: 2px 6px;
+    border-radius: 4px;
+}
+.butns button,
+.delete-all{
+    border: none;
+    outline: none;
+    padding: 10px 12px;
+    color: white;
+    border-radius: 5px;
+    cursor: pointer;
+}
+.butns .del{
+    background-color: #ed2525;
+}
+.butns .edit{
+    background-color:rgb(10 153 10);
+    margin-right: 10px;
+}
+.delete-all{
+    background-color: #ff2222;
+    margin-top: 20px;
+}
+.notification {
+    position: fixed;
+    top: 20px;
+    right: 20px;
+    background-color: #4caf50;
+    /* Green for success */
+    color: white;
+    padding: 10px 20px;
+    border-radius: 5px;
+    font-size: 14px;
+    z-index: 1000;
+    opacity: 0;
+    animation: fadeInOut 3s forwards;
+}
+
+.notification.success {
+    background-color: #4caf50;
+}
+
+.notification.error {
+    background-color: #f44336;
+}
+
+@keyframes fadeInOut {
+    0% {
+        opacity: 0;
+        transform: translateY(-10px);
+    }
+
+    10%,
+    90% {
+        opacity: 1;
+        transform: translateY(0);
+    }
+
+    100% {
+        opacity: 0;
+        transform: translateY(-10px);
+    }
+}
